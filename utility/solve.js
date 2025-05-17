@@ -1,10 +1,20 @@
 import { split } from "./split.js";
 import { calculate } from "./calculate.js";
 
-function getAllOperationCombos(ops, slots) {
-  if (slots === 0) return [[]];
-  const rest = getAllOperationCombos(ops, slots - 1);
-  return ops.flatMap((op) => rest.map((arr) => [op, ...arr]));
+function getAllOperationCombos(ops) {
+    // Return all unique orderings (permutations) of the ops array
+    if (ops.length === 0) return [[]];
+    if (ops.length === 1) return [ops];
+
+    const results = [];
+    for (let i = 0; i < ops.length; i++) {
+        const op = ops[i];
+        const rest = ops.slice(0, i).concat(ops.slice(i + 1));
+        for (const perm of getAllOperationCombos(rest)) {
+            results.push([op, ...perm]);
+        }
+    }
+    return results;
 }
 
 // Possible operations. '+' is always assumed first so we don't need it here
