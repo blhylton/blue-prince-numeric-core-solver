@@ -2,8 +2,18 @@ import { solveNumberPuzzle } from "./utility/solve.js"; // Adjust path as needed
 
 const form = document.getElementById("puzzleForm");
 const input = document.getElementById("numberInput");
-const resultDiv = document.getElementById("result-value");
+const resultContainer = document.getElementById("result");
+const resultDiv = document.getElementById("result-number");
 const resultFormulaDiv = document.getElementById("result-formula");
+
+function showResultSection() {
+  const section = document.getElementById('result');
+  section.classList.remove('hidden');
+  // Let the browser register the change before transitioning opacity
+  requestAnimationFrame(() => {
+    section.classList.remove('opacity-0');
+  });
+}
 
 
 form.addEventListener("submit", (e) => {
@@ -53,4 +63,6 @@ form.addEventListener("submit", (e) => {
     resultDiv.classList.add("text-red-600");
     console.error(err);
   }
+
+  showResultSection()
 });
