@@ -27,7 +27,7 @@ A modern, browser-based solver for the "Blue Prince Numeric Core" puzzle.
     .
     ├── index.html
     ├── main.js
-    ├── modules/
+    ├── utility/
     │ ├── split.js
     │ ├── calculate.js
     │ └── solve.js
