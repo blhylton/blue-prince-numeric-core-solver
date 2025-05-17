@@ -15,7 +15,7 @@ A modern, browser-based solver for the "Blue Prince Numeric Core" puzzle.
 
 ## Usage
 
-1. **Visit the [GitHub Pages site](https://blhylton.github.io//)**
+1. **Visit the [GitHub Pages site](https://blhylton.github.io/blue-prince-numeric-core-solver/)**
 2. **Enter a 4+ digit number** in the input field.
 3. **Click "Solve"** to see:
    - The smallest possible whole number result.
