@@ -22,7 +22,7 @@ const OP_COMBOS = getAllOperationCombos(["-", "*", "/"], 3);
 
 export function solve(num) {
 
-  const splits = /^\d{4,}$/.test(raw) 
+  const splits = /^\d{4,}$/.test(num) 
     ? split(num)
     : [num.split(/[\s,]+/).map(Number).filter(x => !isNaN(x))];
   
