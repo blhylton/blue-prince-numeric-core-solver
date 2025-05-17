@@ -34,10 +34,12 @@ export function solve(num) {
     for (const ops of OP_COMBOS) {
       const value = calculate(splits[i], ops);
       // Ignore non-finite numbers (e.g., division by zero)
-      if (value === null || !Number.isInteger(value) || value < 0 || value > result) continue;
-      result = value;
-      bestSplit = splits[i];
-      bestOps = ops;
+      if (value === null || !Number.isInteger(value) || value < 0 ) continue;
+      if(value < result) {
+        result = value;
+        bestSplit = splits[i];
+        bestOps = ops;
+      }
 
       if (result === 0) {
         return {
