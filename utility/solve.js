@@ -21,7 +21,11 @@ function getAllOperationCombos(ops) {
 const OP_COMBOS = getAllOperationCombos(["-", "*", "/"], 3);
 
 export function solve(num) {
-  const splits = split(num); // 4 x N array
+
+  const splits = /^\d{4,}$/.test(raw) 
+    ? split(num)
+    : [num.split(/[\s,]+/).map(Number).filter(x => !isNaN(x))];
+  
   const n = splits.length;
 
   let result = null,

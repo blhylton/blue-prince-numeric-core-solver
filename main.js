@@ -20,19 +20,12 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
   const numStr = input.value.trim();
 
-  // Quick input validation
-  if (!/^\d{4,}$/.test(numStr)) {
-    resultDiv.textContent = "Please enter a number with at least 4 digits.";
-    resultDiv.classList.add("text-red-600");
-    return;
-  }
-
   // Clear previous state
   resultDiv.classList.remove("text-red-600");
   resultDiv.textContent = "Solving...";
 
   try {
-    const solutionObj = solve(Number(numStr));
+    const solutionObj = solve(numStr);
     if (
         !solutionObj ||
         solutionObj.result === null ||
