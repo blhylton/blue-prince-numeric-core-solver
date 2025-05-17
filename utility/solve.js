@@ -35,7 +35,7 @@ export function solve(num) {
       const value = calculate(splits[i], ops);
       // Ignore non-finite numbers (e.g., division by zero)
       if (value === null || !Number.isInteger(value) || value < 0 ) continue;
-      if(value < result) {
+      if (result === null || value < result) {
         result = value;
         bestSplit = splits[i];
         bestOps = ops;
