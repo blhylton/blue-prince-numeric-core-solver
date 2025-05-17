@@ -1,5 +1,5 @@
-import { split } from "./split";
-import { calculate } from "./calculate";
+import { split } from "./split.js";
+import { calculate } from "./calculate.js";
 
 function getAllOperationCombos(ops, slots) {
   if (slots === 0) return [[]];
