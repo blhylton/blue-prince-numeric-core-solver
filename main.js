@@ -32,7 +32,7 @@ form.addEventListener("submit", (e) => {
   resultDiv.textContent = "Solving...";
 
   try {
-    const solutionObj = solveNumberPuzzle(Number(numStr));
+    const solutionObj = solve(Number(numStr));
     if (
         !solutionObj ||
         solutionObj.result === null ||
