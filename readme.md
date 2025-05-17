@@ -24,15 +24,15 @@ A modern, browser-based solver for the "Blue Prince Numeric Core" puzzle.
 ## Development
 
 ### Folder Structure
-.
-├── index.html
-├── main.js
-├── modules/
-│ ├── split.js
-│ ├── calculate.js
-│ └── solve.js
-├── style.css # (Optional - if you add custom styles)
-└── README.md
+    .
+    ├── index.html
+    ├── main.js
+    ├── modules/
+    │ ├── split.js
+    │ ├── calculate.js
+    │ └── solve.js
+    ├── style.css # (Optional - if you add custom styles)
+    └── README.md
 
 
 - All logic lives in the `/modules` folder as ES modules.
