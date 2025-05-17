@@ -1,4 +1,4 @@
-import { solveNumberPuzzle } from "./utility/solve.js"; // Adjust path as needed
+import { solve } from "./utility/solve.js"; // Adjust path as needed
 
 const form = document.getElementById("puzzleForm");
 const input = document.getElementById("numberInput");
